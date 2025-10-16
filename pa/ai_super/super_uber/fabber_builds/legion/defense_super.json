@@ -1,0 +1,392 @@
+{
+  "build_list": [
+    {
+      "name": "Iron Dome - PROACTIVE Defense",
+      "to_build": "LegionDefenseAdvancedAntiNukeSilo",
+      "instance_count": 50,
+      "shared_instance_count": "AntiNukeSilo",
+      "priority": 620,
+      "min_num_assisters": 10,
+      "max_num_assisters": 25,
+      "base_sort": "FromMainBase",
+      "builders": [
+        "AnyLegionFabberAdvanced",
+        "AnyLegionFabberBasic"
+      ],
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "CanAffordPotentialDrain",
+            "string0": "LegionDefenseAdvancedAntiNukeSilo"
+          },
+          {
+            "test_type": "UnitCountInBase",
+            "unit_type_string0": "Structure & Factory",
+            "compare0": ">=",
+            "value0": 1
+          },
+          {
+            "test_type": "UnitCountInBase",
+            "unit_type_string0": "Structure & NukeDefense",
+            "compare0": "<",
+            "value0": 3
+          },
+          {
+            "test_type": "CanFindPlaceToBuild",
+            "string0": "LegionDefenseAdvancedAntiNukeSilo"
+          }
+        ]
+      ],
+      "placement_rules": {
+        "buffer": 3,
+        "placement_type": "FromBaseCenter"
+      }
+    },
+    {
+      "name": "Iron Dome",
+      "to_build": "LegionDefenseAdvancedAntiNukeSilo",
+      "instance_count": 50,
+      "shared_instance_count": "AntiNukeSilo",
+      "priority": 550,
+      "min_num_assisters": 5,
+      "max_num_assisters": 20,
+      "base_sort": "FromMainBase",
+      "builders": [
+        "AnyLegionFabberAdvanced",
+        "AnyLegionFabberBasic"
+      ],
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "CanAffordPotentialDrain",
+            "string0": "LegionDefenseAdvancedAntiNukeSilo"
+          },
+          {
+            "test_type": "SystemToPlanetThreatRatio",
+            "string0": "Nuke",
+            "string1": "AntiNuke",
+            "compare0": ">",
+            "value0": 1
+          },
+          {
+            "test_type": "UnitCountInBase",
+            "unit_type_string0": "Structure & Factory",
+            "compare0": ">=",
+            "value0": 1
+          },
+          {
+            "test_type": "UnitCountInBase",
+            "unit_type_string0": "Structure & NukeDefense",
+            "compare0": "<",
+            "value0": 3
+          },
+          {
+            "test_type": "CanFindPlaceToBuild",
+            "string0": "LegionDefenseAdvancedAntiNukeSilo"
+          }
+        ],
+        [
+          {
+            "test_type": "OtherPlanetNeedsReconAssistance",
+            "boolean": true
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "CanAffordPotentialDrain",
+            "string0": "LegionDefenseAdvancedAntiNukeSilo"
+          },
+          {
+            "test_type": "SystemThreat",
+            "string0": "Orbital",
+            "compare0": ">",
+            "value0": 0
+          },
+          {
+            "test_type": "UnitCountInBase",
+            "unit_type_string0": "Structure & Factory",
+            "compare0": ">=",
+            "value0": 3
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Structure & NukeDefense",
+            "compare0": "<",
+            "value0": 1
+          },
+          {
+            "test_type": "CanFindPlaceToBuild",
+            "string0": "LegionDefenseAdvancedAntiNukeSilo"
+          }
+        ]
+      ],
+      "placement_rules": {
+        "buffer": 2,
+        "placement_type": "FromBaseCenter",
+        "unit_count_rules": [
+          {
+            "unit_type_string": "Commander | (Structure & Factory)",
+            "alliance": "Ally",
+            "compare_type": ">=",
+            "range": 200,
+            "count": 3
+          },
+          {
+            "unit_type_string": "Structure & NukeDefense",
+            "alliance": "Ally",
+            "compare_type": "<",
+            "range": 200,
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Iron Dome - Commander",
+      "to_build": "LegionDefenseAdvancedAntiNukeSilo",
+      "instance_count": 20,
+      "shared_instance_count": "AntiNukeSilo",
+      "priority": 650,
+      "min_num_assisters": 8,
+      "max_num_assisters": 20,
+      "base_sort": "FromMainBase",
+      "builders": [
+        "AnyLegionFabberAdvanced",
+        "AnyLegionFabberBasic"
+      ],
+      "build_conditions": [
+        [
+          {
+            "test_type": "HaveHadANukeEvent",
+            "boolean": true
+          },
+          {
+            "test_type": "UnitCountInBase",
+            "unit_type_string0": "Commander",
+            "compare0": ">=",
+            "value0": 1
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Structure & NukeDefense",
+            "compare0": "<",
+            "value0": 1
+          },
+          {
+            "test_type": "CanFindPlaceToBuild",
+            "string0": "LegionDefenseAdvancedAntiNukeSilo"
+          }
+        ],
+        [
+          {
+            "test_type": "SystemToPlanetThreatRatio",
+            "string0": "Nuke",
+            "string1": "AntiNuke",
+            "compare0": ">",
+            "value0": 1
+          },
+          {
+            "test_type": "UnitCountInBase",
+            "unit_type_string0": "Commander",
+            "compare0": ">=",
+            "value0": 1
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Structure & NukeDefense",
+            "compare0": "<",
+            "value0": 1
+          },
+          {
+            "test_type": "CanFindPlaceToBuild",
+            "string0": "LegionDefenseAdvancedAntiNukeSilo"
+          }
+        ],
+        [
+          {
+            "test_type": "HaveHadANukeEvent",
+            "boolean": true
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "CanAffordPotentialDrain",
+            "string0": "LegionDefenseAdvancedAntiNukeSilo"
+          },
+          {
+            "test_type": "UnitCountInBase",
+            "unit_type_string0": "Commander",
+            "compare0": ">=",
+            "value0": 1
+          },
+          {
+            "test_type": "UnitCountInBase",
+            "unit_type_string0": "Structure & NukeDefense",
+            "compare0": "<",
+            "value0": 1
+          },
+          {
+            "test_type": "CanFindPlaceToBuild",
+            "string0": "LegionDefenseAdvancedAntiNukeSilo"
+          }
+        ],
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "CanAffordPotentialDrain",
+            "string0": "LegionDefenseAdvancedAntiNukeSilo"
+          },
+          {
+            "test_type": "SystemToPlanetThreatRatio",
+            "string0": "Nuke",
+            "string1": "AntiNuke",
+            "compare0": ">",
+            "value0": 1
+          },
+          {
+            "test_type": "UnitCountInBase",
+            "unit_type_string0": "Commander",
+            "compare0": ">=",
+            "value0": 1
+          },
+          {
+            "test_type": "UnitCountInBase",
+            "unit_type_string0": "Structure & NukeDefense",
+            "compare0": "<",
+            "value0": 1
+          },
+          {
+            "test_type": "CanFindPlaceToBuild",
+            "string0": "LegionDefenseAdvancedAntiNukeSilo"
+          }
+        ]
+      ],
+      "placement_rules": {
+        "buffer": 2,
+        "placement_type": "FromBaseCenter",
+        "unit_count_rules": [
+          {
+            "unit_type_string": "Commander",
+            "alliance": "Ally",
+            "compare_type": ">=",
+            "range": 200,
+            "count": 1
+          },
+          {
+            "unit_type_string": "Structure & NukeDefense",
+            "alliance": "Ally",
+            "compare_type": "<",
+            "range": 200,
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Iron Dome - Rush",
+      "to_build": "LegionDefenseAdvancedAntiNukeSilo",
+      "instance_count": 30,
+      "shared_instance_count": "AntiNukeSilo",
+      "priority": 600,
+      "min_num_assisters": 5,
+      "max_num_assisters": 12,
+      "base_sort": "FromMainBase",
+      "builders": [
+        "AnyLegionFabberAdvanced",
+        "AnyLegionFabberBasic"
+      ],
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "CanAffordPotentialDrain",
+            "string0": "LegionDefenseAdvancedAntiNukeSilo"
+          },
+          {
+            "test_type": "SystemThreat",
+            "string0": "Nuke",
+            "compare0": ">",
+            "value0": 0
+          },
+          {
+            "test_type": "UnitCountInBase",
+            "unit_type_string0": "Structure & Factory",
+            "compare0": ">=",
+            "value0": 5
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Structure & NukeDefense",
+            "compare0": "<",
+            "value0": 1
+          },
+          {
+            "test_type": "CanFindPlaceToBuild",
+            "string0": "LegionDefenseAdvancedAntiNukeSilo"
+          }
+        ],
+        [
+          {
+            "test_type": "HaveHadANukeEvent",
+            "boolean": true
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "CanAffordPotentialDrain",
+            "string0": "LegionDefenseAdvancedAntiNukeSilo"
+          },
+          {
+            "test_type": "UnitCountInBase",
+            "unit_type_string0": "Structure & Factory",
+            "compare0": ">=",
+            "value0": 3
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Structure & NukeDefense",
+            "compare0": "<",
+            "value0": 1
+          },
+          {
+            "test_type": "CanFindPlaceToBuild",
+            "string0": "LegionDefenseAdvancedAntiNukeSilo"
+          }
+        ]
+      ],
+      "placement_rules": {
+        "buffer": 2,
+        "placement_type": "FromBaseCenter",
+        "unit_count_rules": [
+          {
+            "unit_type_string": "Commander | (Structure & Factory)",
+            "alliance": "Ally",
+            "compare_type": ">=",
+            "range": 200,
+            "count": 3
+          },
+          {
+            "unit_type_string": "Structure & NukeDefense",
+            "alliance": "Ally",
+            "compare_type": "<",
+            "range": 200,
+            "count": 1
+          }
+        ]
+      }
+    }
+  ]
+}

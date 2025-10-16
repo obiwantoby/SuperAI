@@ -1,0 +1,134 @@
+{
+  "platoon_templates": {
+    "Dox_Harassment_Small": {
+      "units": [
+        {
+          "unit_types": "(Bot & Offense & Mobile & Basic) - Artillery - Tactical - AirDefense - Fabber - Construction - SelfDestruct",
+          "min_count": 5,
+          "max_count": 8,
+          "squad": "Harassment"
+        }
+      ]
+    },
+    "Dox_Harassment_Medium": {
+      "units": [
+        {
+          "unit_types": "(Bot & Offense & Mobile & Basic) - Artillery - Tactical - AirDefense - Fabber - Construction - SelfDestruct",
+          "min_count": 10,
+          "max_count": 15,
+          "squad": "Harassment"
+        }
+      ]
+    },
+    "Dox_Harassment_Large": {
+      "units": [
+        {
+          "unit_types": "(Bot & Offense & Mobile & Basic) - Artillery - Tactical - AirDefense - Fabber - Construction - SelfDestruct",
+          "min_count": 20,
+          "max_count": 30,
+          "squad": "Harassment"
+        }
+      ]
+    },
+    "Dox_MEX_Snipe": {
+      "units": [
+        {
+          "unit_types": "(Bot & Offense & Mobile & Basic) - Artillery - Tactical - AirDefense - Fabber - Construction - SelfDestruct",
+          "min_count": 3,
+          "max_count": 5,
+          "squad": "Raider"
+        }
+      ]
+    },
+    "Bomber_Harassment_Small": {
+      "units": [
+        {
+          "unit_types": "(Air & Bomber & Mobile & Basic) - Fabber - Construction",
+          "min_count": 2,
+          "max_count": 4,
+          "squad": "AirRaid"
+        }
+      ]
+    },
+    "Bomber_Harassment_Medium": {
+      "units": [
+        {
+          "unit_types": "(Air & Bomber & Mobile) - Fabber - Construction",
+          "min_count": 5,
+          "max_count": 10,
+          "squad": "AirRaid"
+        }
+      ]
+    },
+    "Bomber_Harassment_Large": {
+      "units": [
+        {
+          "unit_types": "(Air & Bomber & Mobile) - Fabber - Construction",
+          "min_count": 10,
+          "max_count": 20,
+          "squad": "AirRaid"
+        }
+      ]
+    },
+    "Gunship_Harassment": {
+      "units": [
+        {
+          "unit_types": "Air & Gunship & Mobile - Fabber - Construction",
+          "min_count": 3,
+          "max_count": 8,
+          "squad": "AirRaid"
+        }
+      ]
+    },
+    "Scout_Continuous": {
+      "units": [
+        {
+          "unit_types": "(Mobile & Scout & (Air | Land)) - Fabber - Construction",
+          "min_count": 1,
+          "max_count": 3,
+          "squad": "Recon"
+        }
+      ]
+    },
+    "Locust_Rush_Small": {
+      "units": [
+        {
+          "unit_types": "Bot & SelfDestruct & Mobile - Advanced",
+          "min_count": 5,
+          "max_count": 10,
+          "squad": "Suicide"
+        }
+      ]
+    },
+    "Locust_Rush_Medium": {
+      "units": [
+        {
+          "unit_types": "Bot & SelfDestruct & Mobile - Advanced",
+          "min_count": 10,
+          "max_count": 20,
+          "squad": "Suicide"
+        }
+      ]
+    },
+    "Locust_Rush_Large": {
+      "units": [
+        {
+          "unit_types": "Bot & SelfDestruct & Mobile - Advanced",
+          "min_count": 20,
+          "max_count": 40,
+          "squad": "Suicide"
+        }
+      ]
+    },
+    "Locust_Rush_Massive": {
+      "units": [
+        {
+          "unit_types": "Bot & SelfDestruct & Mobile - Advanced",
+          "min_count": 40,
+          "max_count": 80,
+          "squad": "Suicide"
+        }
+      ]
+    }
+  }
+}

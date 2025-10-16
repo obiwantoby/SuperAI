@@ -1,0 +1,17 @@
+{
+  "base_spec": "/pa/units/land/l_energy_plant/l_energy_plant.json",
+  "display_name": "Energy Plant",
+  "description": "AI Economy Boost - Produces 2400 energy per second",
+  "production": {
+    "energy": 2400
+  },
+  "unit_types": [
+    "UNITTYPE_Structure",
+    "UNITTYPE_EnergyProduction",
+    "UNITTYPE_Basic",
+    "UNITTYPE_CmdBuild",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_Economy",
+    "UNITTYPE_Custom58"
+  ]
+}

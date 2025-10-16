@@ -1,0 +1,157 @@
+{
+  "build_list": [
+    {
+      "name": "Atlas",
+      "to_build": "SeismicBot",
+      "instance_count": 1,
+      "min_num_assisters": 5,
+      "max_num_assisters": 15,
+      "shared_instance_count": "NukeSilo",
+      "priority": 277,
+      "base_sort": "FromBuilder",
+      "builders": ["AdvancedBotFabber", "SupportCommander"],
+      "build_conditions": [
+        [
+          {
+            "test_type": "EnemySurfacePresenceOnPlanet",
+            "boolean": true
+          },
+          {
+            "test_type": "PlanetIsRespawnable",
+            "boolean": false
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "PlanetHighestEnemyArmyThreat",
+            "string0": "Economy",
+            "compare0": ">",
+            "value0": 5000
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Fabber - Orbital",
+            "compare0": ">=",
+            "value0": 15
+          },
+          {
+            "test_type": "CanFindPlaceToBuild",
+            "string0": "SeismicBot"
+          }
+        ]
+      ],
+      "placement_rules": {
+        "placement_type": "FromBasePerimeter",
+        "threat": {
+          "influence_type": "AntiSurface",
+          "compare_type": "<",
+          "radius": 10,
+          "value": 50
+        }
+      }
+    },
+    {
+      "name": "Ares",
+      "to_build": "FortressVehicle",
+      "instance_count": 1,
+      "min_num_assisters": 5,
+      "max_num_assisters": 15,
+      "shared_instance_count": "NukeSilo",
+      "priority": 381,
+      "base_sort": "FromBuilder",
+      "builders": ["AdvancedVehicleFabber"],
+      "build_conditions": [
+        [
+          {
+            "test_type": "EnemySurfacePresenceOnPlanet",
+            "boolean": true
+          },
+          {
+            "test_type": "PlanetIsRespawnable",
+            "boolean": false
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "PlanetHighestEnemyArmyThreat",
+            "string0": "Economy",
+            "compare0": ">",
+            "value0": 5000
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Fabber - Orbital",
+            "compare0": ">=",
+            "value0": 15
+          },
+          {
+            "test_type": "CanFindPlaceToBuild",
+            "string0": "FortressVehicle"
+          }
+        ]
+      ],
+      "placement_rules": {
+        "placement_type": "FromBasePerimeter",
+        "threat": {
+          "influence_type": "AntiSurface",
+          "compare_type": "<",
+          "radius": 10,
+          "value": 50
+        }
+      }
+    },
+    {
+      "name": "Zeus - Helios Titan Aggressive",
+      "to_build": "TeslaGunship",
+      "instance_count": 3,
+      "min_num_assisters": 10,
+      "max_num_assisters": 25,
+      "priority": 500,
+      "base_sort": "FromMainBase",
+      "builders": ["AdvancedAirFabber"],
+      "build_conditions": [
+        [
+          {
+            "test_type": "EnemyPresenceOnPlanet",
+            "boolean": true
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Air & Titan",
+            "compare0": "<",
+            "value0": 3
+          },
+          {
+            "test_type": "CurrentMetalEfficiency",
+            "compare0": ">",
+            "value0": 1
+          },
+          {
+            "test_type": "CurrentEnergyEfficiency",
+            "compare0": ">",
+            "value0": 1
+          },
+          {
+            "test_type": "MetalStorageFrac",
+            "compare0": ">",
+            "value0": 0.7
+          },
+          {
+            "test_type": "CanAffordPotentialDrain",
+            "string0": "TeslaGunship"
+          },
+          {
+            "test_type": "CanFindPlaceToBuild",
+            "string0": "TeslaGunship"
+          }
+        ]
+      ],
+      "placement_rules": {
+        "buffer": 3,
+        "placement_type": "FromBaseCenter"
+      }
+    }
+  ]
+}

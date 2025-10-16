@@ -1,0 +1,99 @@
+{
+  "build_list": [
+    {
+      "name": "Locust - Unit Cannon SPAM",
+      "to_build": "BasicBoomBot",
+      "instance_count": -1,
+      "max_num_assisters": 20,
+      "priority": 500,
+      "builders": ["UnitCannon"],
+      "build_conditions": [
+        [
+          {
+            "test_type": "HasPersonalityTag",
+            "string0": "SuperAggressive",
+            "boolean": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Locust - Unit Cannon Rush",
+      "to_build": "BasicBoomBot",
+      "instance_count": -1,
+      "max_num_assisters": 15,
+      "priority": 450,
+      "builders": ["UnitCannon"],
+      "build_conditions": [[]]
+    },
+    {
+      "name": "Dox - Unit Cannon Assault",
+      "to_build": "BasicAssaultBot",
+      "instance_count": -1,
+      "max_num_assisters": 10,
+      "priority": 400,
+      "builders": ["UnitCannon"],
+      "build_conditions": [[]]
+    },
+    {
+      "name": "Bolo - Unit Cannon Heavy Assault",
+      "to_build": "BasicTank",
+      "instance_count": -1,
+      "max_num_assisters": 8,
+      "priority": 350,
+      "builders": ["UnitCannon"],
+      "build_conditions": [[]]
+    },
+    {
+      "name": "Slammer - Unit Cannon",
+      "to_build": "AdvancedAssaultBot",
+      "instance_count": -1,
+      "max_num_assisters": 10,
+      "priority": 100,
+      "builders": ["UnitCannon"],
+      "build_conditions": [
+        [
+          {
+            "test_type": "HasPersonalityTag",
+            "string0": "queller",
+            "boolean": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Ant - Unit Cannon",
+      "to_build": "LightLaserTank",
+      "instance_count": -1,
+      "max_num_assisters": 10,
+      "priority": 50,
+      "builders": ["UnitCannon"],
+      "build_conditions": [
+        [
+          {
+            "test_type": "HasPersonalityTag",
+            "string0": "queller",
+            "boolean": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Dox - Unit Cannon",
+      "to_build": "BasicAssaultBot",
+      "instance_count": -1,
+      "max_num_assisters": 10,
+      "priority": 50,
+      "builders": ["UnitCannon"],
+      "build_conditions": [
+        [
+          {
+            "test_type": "HasPersonalityTag",
+            "string0": "queller",
+            "boolean": true
+          }
+        ]
+      ]
+    }
+  ]
+}

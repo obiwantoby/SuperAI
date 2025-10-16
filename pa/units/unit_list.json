@@ -1,0 +1,8 @@
+{
+    "units": [
+        "/pa/units/land/metal_extractor_ai/metal_extractor_ai.json",
+        "/pa/units/land/energy_plant_ai/energy_plant_ai.json",
+        "/pa/units/orbital/ion_defense_ai/ion_defense_ai.json",
+        "/pa/units/land/anti_nuke_launcher_ai/anti_nuke_launcher_ai.json"
+    ]
+}

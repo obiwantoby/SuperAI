@@ -1,0 +1,27 @@
+{
+  "context": "server",
+  "identifier": "com.pa.super.ai",
+  "display_name": "SuperAI - Locust Swarm",
+  "description": "An elite AI with aggressive Locust (boom bot) rushes and Unit Cannon planetary bombardment! Based on Queller AI with: Custom AI nukes (5000 metal), 50+ anti-nukes, 4 Locust suicide swarm types (5-80 bots), 15 Unit Cannons per planet, Dox/Bomber/Gunship harassment raids, and Paragon endgame. Features constant cross-planetary pressure with suicide bot avalanches. Requires Second Wave Units and Paragon mods.",
+  "author": "Brandon (based on Queller AI by Quitch)",
+  "version": "1.5.0",
+  "build": "116982",
+  "date": "2025-01-12",
+  "signature": " ",
+  "forum": "",
+  "category": [
+    "ai",
+    "titans",
+    "skirmish"
+  ],
+  "icon": "https://i.imgur.com/superai.gif",
+  "scenes": {
+    "new_game": ["coui://ui/mods/com.pa.super.ai/new_game.js"]
+  },
+  "dependencies": [
+    "com.pa.brandon.paragon",
+    "pa.mla.unit.addon"
+  ],
+  "priority": 110,
+  "titansOnly": true
+}

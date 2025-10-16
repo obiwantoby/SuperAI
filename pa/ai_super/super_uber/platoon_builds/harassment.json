@@ -1,0 +1,258 @@
+{
+  "platoon_builds": [
+    {
+      "name": "Dox Harassment - Early MEX Snipes",
+      "platoon_template": "Dox_MEX_Snipe",
+      "priority": 760,
+      "max_num_squads": 5,
+      "instance_count": 5,
+      "personality_tags": ["Offense", "Aggressive"],
+      "threat_type": "Land",
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Bot & Offense & Mobile & Basic) - Artillery",
+            "compare0": ">=",
+            "value0": 5
+          },
+          {
+            "test_type": "EnemyThreat",
+            "string0": "Land",
+            "compare0": "<",
+            "value0": 100
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Dox Harassment - Small Raids",
+      "platoon_template": "Dox_Harassment_Small",
+      "priority": 755,
+      "max_num_squads": 8,
+      "instance_count": 3,
+      "personality_tags": ["Offense", "Aggressive"],
+      "threat_type": "Land",
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Bot & Offense & Mobile & Basic) - Artillery",
+            "compare0": ">=",
+            "value0": 10
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Dox Harassment - Medium Raids",
+      "platoon_template": "Dox_Harassment_Medium",
+      "priority": 750,
+      "max_num_squads": 5,
+      "instance_count": 2,
+      "personality_tags": ["Offense", "Aggressive"],
+      "threat_type": "Land",
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "(Bot & Offense & Mobile & Basic) - Artillery",
+            "compare0": ">=",
+            "value0": 20
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Bomber Harassment - Economy Raids",
+      "platoon_template": "Bomber_Harassment_Small",
+      "priority": 745,
+      "max_num_squads": 6,
+      "instance_count": 3,
+      "personality_tags": ["Offense", "Aggressive"],
+      "threat_type": "Air",
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Air & Bomber & Basic",
+            "compare0": ">=",
+            "value0": 4
+          },
+          {
+            "test_type": "EnemyThreat",
+            "string0": "AntiAir",
+            "compare0": "<",
+            "value0": 50
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Bomber Harassment - Medium Raids",
+      "platoon_template": "Bomber_Harassment_Medium",
+      "priority": 740,
+      "max_num_squads": 4,
+      "instance_count": 2,
+      "personality_tags": ["Offense", "Aggressive"],
+      "threat_type": "Air",
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Air & Bomber",
+            "compare0": ">=",
+            "value0": 10
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Gunship Harassment - Hit & Run",
+      "platoon_template": "Gunship_Harassment",
+      "priority": 735,
+      "max_num_squads": 3,
+      "instance_count": 2,
+      "personality_tags": ["Offense", "Aggressive"],
+      "threat_type": "Air",
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Air & Gunship",
+            "compare0": ">=",
+            "value0": 5
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Continuous Scouting",
+      "platoon_template": "Scout_Continuous",
+      "priority": 730,
+      "max_num_squads": 10,
+      "instance_count": 10,
+      "personality_tags": ["Recon"],
+      "threat_type": "Scout",
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Mobile & Scout",
+            "compare0": ">=",
+            "value0": 2
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Locust Rush - Small Swarm",
+      "platoon_template": "Locust_Rush_Small",
+      "priority": 765,
+      "max_num_squads": 10,
+      "instance_count": 8,
+      "personality_tags": ["Offense", "Aggressive", "Suicide"],
+      "threat_type": "Land",
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Bot & SelfDestruct & Mobile - Advanced",
+            "compare0": ">=",
+            "value0": 10
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Locust Rush - Medium Swarm",
+      "platoon_template": "Locust_Rush_Medium",
+      "priority": 760,
+      "max_num_squads": 8,
+      "instance_count": 6,
+      "personality_tags": ["Offense", "Aggressive", "Suicide"],
+      "threat_type": "Land",
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Bot & SelfDestruct & Mobile - Advanced",
+            "compare0": ">=",
+            "value0": 20
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Locust Rush - Large Swarm",
+      "platoon_template": "Locust_Rush_Large",
+      "priority": 755,
+      "max_num_squads": 6,
+      "instance_count": 4,
+      "personality_tags": ["Offense", "Aggressive", "Suicide"],
+      "threat_type": "Land",
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Bot & SelfDestruct & Mobile - Advanced",
+            "compare0": ">=",
+            "value0": 40
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Locust Rush - MASSIVE Swarm",
+      "platoon_template": "Locust_Rush_Massive",
+      "priority": 750,
+      "max_num_squads": 4,
+      "instance_count": 2,
+      "personality_tags": ["Offense", "Aggressive", "Suicide"],
+      "threat_type": "Land",
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Bot & SelfDestruct & Mobile - Advanced",
+            "compare0": ">=",
+            "value0": 80
+          }
+        ]
+      ]
+    }
+  ]
+}

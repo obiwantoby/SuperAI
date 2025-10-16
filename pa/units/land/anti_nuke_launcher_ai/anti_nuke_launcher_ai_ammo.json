@@ -1,0 +1,58 @@
+{
+  "display_name": "SuperAI Anti-Nuke Missile",
+  "description": "AI-exclusive rapid-fire anti-nuke missile with ultra-reduced cost.",
+  "si_name": "anti_nuke_launcher_ai_ammo",
+  "has_notifications": true,
+  "ammo_type": "Projectile",
+  "build_metal_cost": 100,
+  "flight_type": "Staged",
+  "damage": 1,
+  "splash_damage": 1,
+  "splash_radius": 0,
+  "initial_velocity": 1500.0,
+  "max_velocity": 1500.0,
+  "turn_rate": 3600,
+  "lifetime": 5,
+  "show_strategic_icon": true,
+  "spawn_layers": "WL_Air",
+  "influence_radius": 1440,
+  "model": {
+    "filename": "/pa/units/air/missile_anti_nuke/missile_anti_nuke.papa"
+  },
+  "collision_check": "target",
+  "collision_response": "destroy",
+  "collision_bounds": 5,
+  "physics": {
+    "radius": 5,
+    "gravity_scalar": 3,
+    "ignore_gravity": true,
+    "add_to_spatial_db": false,
+    "allow_underground": true
+  },
+  "fx_offsets": [
+    {
+      "type": "moving",
+      "filename": "/pa/units/air/missile_anti_nuke/missile_anti_nuke_trail.pfx",
+      "bone": "bone_root",
+      "offset": [0, 0, 0]
+    }
+  ],
+  "events": {
+    "died": {
+      "audio_cue": "/SE/Impacts/missile_seeking",
+      "effect_spec": "/pa/effects/specs/default_explosion_bot.pfx"
+    }
+  },
+  "stages": [
+    {
+      "ignores_LOS": true,
+      "stage_duration": 1000,
+      "rotates_to_velocity": true
+    }
+  ],
+  "audio_loop": "/SE/Movement/missile/anti_nuke_missile_fly_loop",
+  "flight_layer": "WL_Air",
+  "spawned_unit_spec": "/pa/units/land/anti_nuke_launcher/anti_nuke_launcher_ammo_explosion.json",
+  "spawned_unit_spec_delay": 0,
+  "TEMP_texelinfo": 1.0
+}
